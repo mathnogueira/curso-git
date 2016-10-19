@@ -13,5 +13,5 @@ os:
 script:
   - mkdir build && cd build
   - cmake -Dtest=ON .. && make -j8
-  - ./urisk_test
+  - ./curso_test
 
