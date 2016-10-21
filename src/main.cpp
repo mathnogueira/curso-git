@@ -1,8 +1,14 @@
 // Arquivo de início de execução do programa
 
-#include <curso/aplicacao.hpp>
+#include <banco/aplicacao.hpp>
+#include <banco/autenticacao/usuario.hpp>
+#include <banco/persistencia/dao_generica.hpp>
+#include <iostream>
+#include <vector>
 
-using namespace Curso;
+using namespace Banco;
+using namespace Banco::Autenticacao;
+using namespace Banco::Persistencia;
 
 int main(int argc, char **argv) 
 {

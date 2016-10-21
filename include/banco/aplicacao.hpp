@@ -1,8 +1,8 @@
 #pragma once
 
-#include <curso/utils/log.hpp>
+#include <banco/utils/log.hpp>
 
-namespace Curso 
+namespace Banco 
 {
 
 	/**
@@ -17,6 +17,11 @@ namespace Curso
 			 * Construtor padrão da classe.
 			 */
 			Aplicacao();
+
+			/**
+			 * Destrutor da aplicação.
+			 */
+			~Aplicacao();
 
 		private:
 

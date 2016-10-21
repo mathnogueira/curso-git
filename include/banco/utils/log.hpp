@@ -2,11 +2,11 @@
 
 #include <string>
 
-namespace Curso
+namespace Banco
 {
 namespace Utils
 {
-	// Namespace Curso::Utils
+	// namespace Banco::Utils
 
 	class Logger 
 	{

@@ -25,7 +25,7 @@ option(gnucompiler "Building using GNU G++" ON)
 
 #### Configurações básicas do projeto ####
 # Nome do projeto
-set (PROJECT_NAME curso)
+set (PROJECT_NAME banco)
 
 # Tipo de build que será realizada
 # Por padrão, o programa é compilado para modo release, porém, caso -Ddebug=ON é especificado,
@@ -75,7 +75,7 @@ if (test)
     enable_testing()
     include_directories(${GTEST_DIR}/include ${GTEST_DIR})
     add_executable(${PROJECT_NAME}_test ${TESTS})
-    TARGET_LINK_LIBRARIES (${PROJECT_NAME}_test gtest gtest_main curso_lib)
+    TARGET_LINK_LIBRARIES (${PROJECT_NAME}_test gtest gtest_main banco_lib)
 endif()
 
 
@@ -98,11 +98,11 @@ include_directories(include)
 
 # Procura todos os arquivos com extensão cpp para ser compilados e gerar
 # os arquivos objeto.
-file (GLOB_RECURSE SOURCES src/curso/*.cpp)
+file (GLOB_RECURSE SOURCES src/banco/*.cpp)
 
 # Cria uma biblioteca para ser linkada ao programa real, dessa forma, fica mais
 # simples de executar os testes de unidade, se eles existirem.
-add_library(curso_lib ${SOURCES})
+add_library(banco_lib ${SOURCES})
 
 # Cria um executável para o projeto
 # Esse executável só será o arquivo main, pois o restante do programa já foi
@@ -111,12 +111,12 @@ add_executable (${PROJECT_NAME} src/main.cpp)
 
 # Linka o programa main com a biblioteca previamente gerada com o restante dos
 # arquivos fonte.
-TARGET_LINK_LIBRARIES (${PROJECT_NAME} ${PROJECT_EXTERNAL_LIBS} curso_lib)
+TARGET_LINK_LIBRARIES (${PROJECT_NAME} ${PROJECT_EXTERNAL_LIBS} banco_lib)
 
 if (COVERAGE_TEST)
 	# Ativa a cobertura de testes
 	INCLUDE(CodeCoverage)
-	SETUP_TARGET_FOR_COVERAGE(coverage, curso_test, coverage)
+	SETUP_TARGET_FOR_COVERAGE(coverage, banco_test, coverage)
 endif()
 
 ##### DEFINIÇÂO DAS VARIAVEIS DO CMAKE #####

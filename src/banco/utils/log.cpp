@@ -1,7 +1,7 @@
-#include <curso/utils/log.hpp>
+#include <banco/utils/log.hpp>
 #include <iostream>
 
-using namespace Curso::Utils;
+using namespace Banco::Utils;
 
 Logger::Logger()
 {
