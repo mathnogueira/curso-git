@@ -15,7 +15,8 @@ TEST(Arquivo, SalvarNovoRegistro)
 	uint novoTamanho = arquivo.ObterTamanho();
 	arquivo.Fechar();
 	// Verifica resultado (tamanho do arquivo + tamanho do inteiro)
-	ASSERT_EQ(novoTamanho, tamanhoArquivo + sizeof(int));
+	// ASSERT_EQ(novoTamanho, tamanhoArquivo + sizeof(int));
+	ASSERT_EQ(3, 2);
 }
 
 TEST(Arquivo, VerificarValorSalvo)
